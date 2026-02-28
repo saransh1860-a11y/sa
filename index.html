@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayReward - Watch Ads, Redeem Codes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <h1>PlayReward</h1>
+        <p class="subtitle">
+          Demo rewards app: users watch sponsored videos to earn points and redeem Google Play gift card codes.
+        </p>
+      </header>
+
+      <section class="card stats-grid">
+        <div>
+          <p class="label">Points Balance</p>
+          <p class="value" id="pointsValue">0</p>
+        </div>
+        <div>
+          <p class="label">Ads Watched Today</p>
+          <p class="value" id="adsWatchedValue">0</p>
+        </div>
+        <div>
+          <p class="label">Redeemed Codes</p>
+          <p class="value" id="codesRedeemedValue">0</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Earn Points</h2>
+        <p>Each ad gives <strong>10 points</strong>. Daily ad cap: <strong>20</strong>.</p>
+        <button id="watchAdButton">Watch Ad</button>
+        <p id="adStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Redeem Rewards</h2>
+        <p>Redeem a code when your balance reaches the required points.</p>
+        <div id="rewardList" class="reward-list"></div>
+        <p class="small-note">
+          This is a local demo. In production, all rewards and validations should be processed securely on a backend.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Redeem History</h2>
+        <ul id="historyList" class="history-list"></ul>
+      </section>
+    </main>
+
+    <template id="rewardTemplate">
+      <article class="reward-item">
+        <div>
+          <p class="reward-name"></p>
+          <p class="reward-cost"></p>
+        </div>
+        <button class="redeem-btn">Redeem</button>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
